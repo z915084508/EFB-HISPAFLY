@@ -72,11 +72,54 @@
             <h2>Checklist</h2>
             <span class="gauge-pill">Preflight</span>
           </header>
-          <p>Quick-access flows and smart verification for each flight phase.</p>
-          <div class="divider"></div>
-          <div class="module-meta">
-            <span>Last sync: 08:12 UTC</span>
-            <span>12 items</span>
+         <div class="module-split">
+            <aside class="module-nav" aria-label="Checklist navigation">
+              <h3>Phases</h3>
+              <ul>
+                <li class="is-active">Cockpit Prep</li>
+                <li>Before Pushback</li>
+                <li>Engine Start</li>
+                <li>Taxi Out</li>
+              </ul>
+              <div class="button-row">
+                <button class="control-button is-primary" type="button">Start Flow</button>
+                <button class="control-button" type="button">View All</button>
+              </div>
+            </aside>
+            <div class="module-content">
+              <p>Quick-access flows with smart verification and crew callouts.</p>
+              <div class="divider"></div>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Response</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Battery</td>
+                    <td>On</td>
+                    <td><span class="status-chip is-good">Checked</span></td>
+                  </tr>
+                  <tr>
+                    <td>Fuel Pumps</td>
+                    <td>Auto</td>
+                    <td><span class="status-chip is-attention">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td>Flight Deck Door</td>
+                    <td>Locked</td>
+                    <td><span class="status-chip is-good">Checked</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="module-meta">
+                <span>Last sync: 08:12 UTC</span>
+                <span>12 items</span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -85,11 +128,67 @@
             <h2>Performance Calculator</h2>
             <span class="gauge-pill">Runway 32</span>
           </header>
-          <p>Weight, balance, and takeoff/landing data in an instrument-style layout.</p>
-          <div class="divider"></div>
-          <div class="module-meta">
-            <span>Flex temp ready</span>
-            <span>MTOW 70%</span>
+           <div class="module-split">
+            <aside class="module-nav" aria-label="Performance inputs">
+              <h3>Inputs</h3>
+              <ul>
+                <li class="is-active">Takeoff</li>
+                <li>Landing</li>
+                <li>Runway</li>
+                <li>Weather</li>
+              </ul>
+              <div class="button-row">
+                <button class="control-button is-primary" type="button">Compute</button>
+                <button class="control-button" type="button">Save</button>
+              </div>
+            </aside>
+            <div class="module-content">
+              <p>Weight, balance, and takeoff data in an instrument-style layout.</p>
+              <div class="divider"></div>
+              <div class="control-grid">
+                <label class="input-field">
+                  Gross Weight (kg)
+                  <input type="text" value="61,400" />
+                </label>
+                <label class="input-field">
+                  Flaps
+                  <input type="text" value="1+F" />
+                </label>
+                <label class="input-field">
+                  Flex Temp (°C)
+                  <input type="text" value="56" />
+                </label>
+                <label class="input-field">
+                  Wind
+                  <input type="text" value="320/12" />
+                </label>
+              </div>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                    <th>Limit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>V1 / VR / V2</td>
+                    <td>146 / 148 / 152</td>
+                    <td>OK</td>
+                  </tr>
+                  <tr>
+                    <td>Required TORA</td>
+                    <td>2,145 m</td>
+                    <td>Runway 2,850 m</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="module-meta">
+                <span>Flex temp ready</span>
+                <span>MTOW 70%</span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -98,11 +197,40 @@
             <h2>SOP</h2>
             <span class="gauge-pill">Normal Ops</span>
           </header>
-          <p>Standard operating procedures with quick drills and reminders.</p>
-          <div class="divider"></div>
-          <div class="module-meta">
-            <span>Revision 2024.06</span>
-            <span>6 chapters</span>
+         <div class="module-split">
+            <aside class="module-nav" aria-label="SOP navigation">
+              <h3>Chapters</h3>
+              <ul>
+                <li class="is-active">1. Briefing</li>
+                <li>2. Taxi</li>
+                <li>3. Takeoff</li>
+                <li>4. Abnormal</li>
+              </ul>
+              <div class="button-row">
+                <button class="control-button is-primary" type="button">Open PDF</button>
+                <button class="control-button" type="button">Bookmark</button>
+              </div>
+            </aside>
+            <div class="module-content">
+              <p>Standard operating procedures with quick drills and reminders.</p>
+              <div class="divider"></div>
+              <div class="sop-section">
+                <h4>Captain Briefing Highlights</h4>
+                <ul>
+                  <li>Departure runway 32, initial climb 5,000 ft.</li>
+                  <li>Reject criteria: below 80 kt for any caution.</li>
+                  <li>Engine-out: maintain runway heading to 1,500 ft.</li>
+                </ul>
+              </div>
+              <div class="sop-section">
+                <h4>Callouts</h4>
+                <p>“80 knots”, “V1”, “Rotate”, “Positive climb, gear up”.</p>
+              </div>
+              <div class="module-meta">
+                <span>Revision 2024.06</span>
+                <span>6 chapters</span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -111,11 +239,54 @@
             <h2>Airport Briefing</h2>
             <span class="gauge-pill">Gate B12</span>
           </header>
-          <p>Approach plates, NOTAMs, and turn-around highlights.</p>
-          <div class="divider"></div>
-          <div class="module-meta">
-            <span>Briefing pack</span>
-            <span>4 charts</span>
+         <div class="module-split">
+            <aside class="module-nav" aria-label="Airport briefing navigation">
+              <h3>Brief Pack</h3>
+              <ul>
+                <li class="is-active">Arrival</li>
+                <li>Taxi In</li>
+                <li>NOTAMs</li>
+                <li>Turnaround</li>
+              </ul>
+              <div class="button-row">
+                <button class="control-button is-primary" type="button">Download</button>
+                <button class="control-button" type="button">Share</button>
+              </div>
+            </aside>
+            <div class="module-content">
+              <p>Approach plates, NOTAMs, and turn-around highlights.</p>
+              <div class="divider"></div>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Section</th>
+                    <th>Template</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ATIS</td>
+                    <td>Wind 310/10, QNH 1016</td>
+                    <td>Updated 10 min</td>
+                  </tr>
+                  <tr>
+                    <td>Runway in Use</td>
+                    <td>32L ILS CAT I</td>
+                    <td>Active</td>
+                  </tr>
+                  <tr>
+                    <td>Stand Info</td>
+                    <td>Gate B12, GPU available</td>
+                    <td>Confirmed</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="module-meta">
+                <span>Briefing pack</span>
+                <span>4 charts</span>
+              </div>
+            </div>
           </div>
         </section>
       </main>
