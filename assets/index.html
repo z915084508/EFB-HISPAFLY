@@ -1,0 +1,96 @@
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..246182f4bf68475aa92575dd1b83432255800217
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,90 @@
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Hispafly EFB Dashboard</title>
++    <link rel="stylesheet" href="styles/efb.css" />
++  </head>
++  <body>
++    <div class="efb-shell">
++      <header class="efb-header">
++        <div class="brand">
++          <img src="assets/logo-placeholder.svg" alt="Hispafly logo placeholder" />
++          <div>
++            <h1>Hispafly EFB</h1>
++            <p>Electronic Flight Bag — dark cockpit-ready layout</p>
++          </div>
++        </div>
++        <div class="status-panel">
++          <div class="status-card">
++            <span>Flight</span>
++            <strong>IB 425</strong>
++          </div>
++          <div class="status-card">
++            <span>Route</span>
++            <strong>LEMD → LEMG</strong>
++          </div>
++          <div class="status-card">
++            <span>Weather</span>
++            <strong>VMC • 23°C</strong>
++          </div>
++        </div>
++      </header>
++
++      <main class="module-grid">
++        <section class="module-card" aria-label="Checklist module">
++          <header>
++            <h2>Checklist</h2>
++            <span class="gauge-pill">Preflight</span>
++          </header>
++          <p>Quick-access flows and smart verification for each flight phase.</p>
++          <div class="divider"></div>
++          <div class="module-meta">
++            <span>Last sync: 08:12 UTC</span>
++            <span>12 items</span>
++          </div>
++        </section>
++
++        <section class="module-card" aria-label="Performance Calculator module">
++          <header>
++            <h2>Performance Calculator</h2>
++            <span class="gauge-pill">Runway 32</span>
++          </header>
++          <p>Weight, balance, and takeoff/landing data in an instrument-style layout.</p>
++          <div class="divider"></div>
++          <div class="module-meta">
++            <span>Flex temp ready</span>
++            <span>MTOW 70%</span>
++          </div>
++        </section>
++
++        <section class="module-card" aria-label="SOP module">
++          <header>
++            <h2>SOP</h2>
++            <span class="gauge-pill">Normal Ops</span>
++          </header>
++          <p>Standard operating procedures with quick drills and reminders.</p>
++          <div class="divider"></div>
++          <div class="module-meta">
++            <span>Revision 2024.06</span>
++            <span>6 chapters</span>
++          </div>
++        </section>
++
++        <section class="module-card" aria-label="Airport Briefing module">
++          <header>
++            <h2>Airport Briefing</h2>
++            <span class="gauge-pill">Gate B12</span>
++          </header>
++          <p>Approach plates, NOTAMs, and turn-around highlights.</p>
++          <div class="divider"></div>
++          <div class="module-meta">
++            <span>Briefing pack</span>
++            <span>4 charts</span>
++          </div>
++        </section>
++      </main>
++    </div>
++  </body>
++</html>
