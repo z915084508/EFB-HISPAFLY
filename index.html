@@ -6,8 +6,42 @@
     <title>Hispafly EFB Dashboard</title>
     <link rel="stylesheet" href="styles/efb.css" />
   </head>
-  <body>
+  <body> 
     <div class="efb-shell">
+       <section class="login-panel" aria-label="Login access panel">
+        <div class="login-status">
+          <span>User: CAPT/FO</span>
+          <span class="status-divider" aria-hidden="true"></span>
+          <span>Device: EFB-OPS-01</span>
+          <span class="status-divider" aria-hidden="true"></span>
+          <span>Status: Standby</span>
+        </div>
+        <div class="login-form">
+          <div class="login-field">
+            <label for="login-username">Username</label>
+            <input
+              id="login-username"
+              name="login-username"
+              type="text"
+              placeholder="Enter crew ID"
+            />
+          </div>
+          <div class="login-field">
+            <label for="login-password">Password</label>
+            <input
+              id="login-password"
+              name="login-password"
+              type="password"
+              placeholder="Enter access key"
+            />
+          </div>
+          <button class="login-button" type="button">Log in</button>
+        </div>
+        <p class="login-note">
+          <strong>Note:</strong> Accounts are manually registered and assigned by the EFB
+          operations team.
+        </p>
+      </section>
       <header class="efb-header">
         <div class="brand">
           <img src="assets/logo-placeholder.svg" alt="Hispafly logo placeholder" />
